@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expert Finanças - Nail Designer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              vibrantPink: {
+                50: '#ffe6ff',
+                100: '#ffccff',
+                200: '#ffb3ff',
+                300: '#ff80ff',
+                400: '#ff4dff',
+                500: '#ff00ff', // Fúcsia Vibrante
+                600: '#d900d9',
+                700: '#b300b3',
+                800: '#8c008c',
+                900: '#660066',
+              },
+              emerald: {
+                50: '#f2f7f7',
+                100: '#e6eeee',
+                200: '#ccdcdc',
+                300: '#99b9b9',
+                400: '#4d8d8d',
+                500: '#004d4d', // Verde Petróleo Profundo
+                600: '#004040',
+                700: '#003333',
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Playfair Display', 'serif'],
+            },
+          },
+        },
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fcfcfc;
+            overflow-x: hidden;
+        }
+        .font-display {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        /* Efeito de Ondas no Título */
+        .wave-text {
+          background: linear-gradient(
+            to right,
+            #ff00ff 20%,
+            #004d4d 40%,
+            #004d4d 60%,
+            #ff00ff 80%
+          );
+          background-size: 200% auto;
+          color: #000;
+          background-clip: text;
+          text-fill-color: transparent;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          animation: shine 4s linear infinite;
+        }
+
+        @keyframes shine {
+          to {
+            background-position: 200% center;
+          }
+        }
+
+        /* Marca d'água Flutuante */
+        .watermark-bg {
+          position: fixed;
+          font-family: 'Playfair Display', serif;
+          font-size: 15vw;
+          font-weight: 900;
+          color: rgba(255, 0, 255, 0.03);
+          white-space: nowrap;
+          pointer-events: none;
+          z-index: -1;
+          user-select: none;
+          animation: float-watermark 20s ease-in-out infinite;
+        }
+
+        @keyframes float-watermark {
+          0%, 100% { transform: translate(-10%, 10%) rotate(-5deg); }
+          50% { transform: translate(10%, -10%) rotate(5deg); }
+        }
+
+        /* Custom scrollbar para estética premium */
+        ::-webkit-scrollbar {
+          width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+          background: #ffb3ff;
+          border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+          background: #ff00ff;
+        }
+        /* Efeito de brilho Neon Fúcsia */
+        .glow-pink {
+          box-shadow: 0 0 20px rgba(255, 0, 255, 0.4);
+        }
+        .glow-pink-hover:hover {
+          box-shadow: 0 0 25px rgba(255, 0, 255, 0.6);
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>
